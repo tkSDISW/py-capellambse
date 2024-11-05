@@ -216,7 +216,8 @@ class ModelFile:
         self.__ignore_uuid_dups = (
             ignore_uuid_dups or self.fragment_type is FragmentType.VISUAL
         )
-        _verify_extension(filename)
+        #removed line below to allow Pub 4 C to be used.
+        #_verify_extension(filename)
 
         with handler.open(filename) as f:
             tree = etree.parse(
